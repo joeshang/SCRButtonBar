@@ -41,6 +41,7 @@
     buttonBar.countPerRow = 4;
     buttonBar.verticalSeperatorMargin = 10;
     buttonBar.horizonalSeperatorMargin = 5;
+    buttonBar.contentInsets = UIEdgeInsetsMake(5, 5, 5, 5);
     buttonBar.backgroundColor = [UIColor redColor];
     [self.view addSubview:buttonBar];
 }

@@ -18,6 +18,7 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
 
 @property (nonatomic, strong) NSMutableArray *verticalSeperators;
 @property (nonatomic, strong) NSMutableArray *horizonalSeperators;
+@property (nonatomic, strong) UIImageView *backgroundImageView;
 
 @end
 
@@ -54,17 +55,23 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
 #pragma mark - Layout
 
 - (void)layoutSubviews {
-    NSInteger row = [self p_totalRow];
-    CGFloat buttonWidth = roundf(self.bounds.size.width / self.countPerRow);
-    CGFloat buttonHeight = roundf(self.bounds.size.height / row);
+    if (self.backgroundImageView) {
+        self.backgroundImageView.frame = self.bounds;
+    }
     
-    __block CGPoint origin = CGPointMake(0.0f, 0.0f);
+    NSInteger row = [self p_totalRow];
+    CGFloat contentWidth = self.bounds.size.width - self.contentInsets.left - self.contentInsets.right;
+    CGFloat contentHeight = self.bounds.size.height - self.contentInsets.top - self.contentInsets.bottom;
+    CGFloat buttonWidth = roundf(contentWidth / self.countPerRow);
+    CGFloat buttonHeight = roundf(contentHeight / row);
+    
+    __block CGPoint origin = CGPointZero;
     [self.items enumerateObjectsUsingBlock:^(UIView *item, NSUInteger index, BOOL *stop){
         
         NSUInteger currentRow = index / self.countPerRow;
         NSUInteger currentColumn = index % self.countPerRow;
-        origin.x = currentColumn * buttonWidth;
-        origin.y = currentRow * buttonHeight;
+        origin.x = self.contentInsets.left + currentColumn * buttonWidth;
+        origin.y = self.contentInsets.top + currentRow * buttonHeight;
         item.frame = CGRectMake(origin.x, origin.y, buttonWidth, buttonHeight);
        
         if (currentColumn != self.countPerRow - 1) {
@@ -80,7 +87,7 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
                 UIView *seperator = self.horizonalSeperators[currentRow];
                 seperator.frame = CGRectMake(self.horizonalSeperatorMargin,
                                              origin.y + buttonHeight,
-                                             self.bounds.size.width - 2 * self.horizonalSeperatorMargin,
+                                             contentWidth - 2 * self.horizonalSeperatorMargin,
                                              self.horizonalSeperatorWeight);
             }
         }
@@ -149,6 +156,21 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
         seperator.frame = originFrame;
         seperator.center = originCenter;
     }
+}
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage {
+    if (!self.backgroundImageView) {
+        self.backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
+        [self insertSubview:self.backgroundImageView atIndex:0];
+    } else {
+        self.backgroundImageView.image = backgroundImage;
+    }
+}
+
+- (void)setContentInsets:(UIEdgeInsets)contentInsets {
+    _contentInsets = contentInsets;
+    
+    [self setNeedsLayout];
 }
 
 #pragma mark - Private

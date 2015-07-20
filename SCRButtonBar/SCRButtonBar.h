@@ -11,8 +11,10 @@
 @interface SCRButtonBar : UIView
 
 @property (nonatomic, copy)   NSArray       *items;
-
 @property (nonatomic, assign) NSUInteger    countPerRow;
+
+@property (nonatomic, strong) UIImage       *backgroundImage;
+@property (nonatomic, assign) UIEdgeInsets  contentInsets;
 
 @property (nonatomic, strong) UIColor       *seperatorColor;
 @property (nonatomic, assign) CGFloat       verticalSeperatorWeight;
