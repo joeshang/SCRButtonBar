@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SCRButtonBar.h"
+#import "SCRButtonBarDefaultButton.h"
 
 @interface ViewController ()
 
@@ -18,19 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSUInteger buttonCount = 5;
+    NSUInteger buttonCount = 6;
     NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:buttonCount];
     for (NSInteger index = 0; index < buttonCount; index++) {
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        SCRButtonBarDefaultButton *button = [[SCRButtonBarDefaultButton alloc]
+                                             initWithTitle:[NSString stringWithFormat:@"测试%@", @(index)]
+                                             icon:[UIImage imageNamed:@"icon"]];
+                                             
+        button.highlightedBackgroundColor = [UIColor lightGrayColor];
+        button.vertical = YES;
         button.tag = index;
-        [button setTitle:[NSString stringWithFormat:@"测试%@", @(index)]
-                forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(onButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self
+                   action:@selector(onButtonClicked:)
+         forControlEvents:UIControlEventTouchUpInside];
         [items addObject:button];
     }
     
-    CGRect buttonBarFrame = CGRectMake(0.0f, 40.0f, self.view.bounds.size.width, 88.0f);
+    CGRect buttonBarFrame = CGRectMake(0.0f, 40.0f, self.view.bounds.size.width, 160.0f);
     SCRButtonBar *buttonBar = [[SCRButtonBar alloc] initWithFrame:buttonBarFrame
                                                             items:items];
     buttonBar.countPerRow = 4;
@@ -42,7 +47,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)onButtonClicked:(id)control {

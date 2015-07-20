@@ -55,8 +55,8 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
 
 - (void)layoutSubviews {
     NSInteger row = [self p_totalRow];
-    CGFloat buttonWidth = roundf((self.bounds.size.width - (self.countPerRow - 1) * self.verticalSeperatorWeight) / self.countPerRow);
-    CGFloat buttonHeight = roundf((self.bounds.size.height - (row - 1) * self.horizonalSeperatorWeight) / row);
+    CGFloat buttonWidth = roundf(self.bounds.size.width / self.countPerRow);
+    CGFloat buttonHeight = roundf(self.bounds.size.height / row);
     
     __block CGPoint origin = CGPointMake(0.0f, 0.0f);
     [self.items enumerateObjectsUsingBlock:^(UIView *item, NSUInteger index, BOOL *stop){
