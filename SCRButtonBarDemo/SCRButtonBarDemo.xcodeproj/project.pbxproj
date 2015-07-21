@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D24217A01B53DC900056D513 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D242179F1B53DC900056D513 /* main.m */; };
+		D24217A31B53DC900056D513 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24217A21B53DC900056D513 /* AppDelegate.m */; };
+		D24217A61B53DC900056D513 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24217A51B53DC900056D513 /* ViewController.m */; };
+		D24217A91B53DC900056D513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24217A71B53DC900056D513 /* Main.storyboard */; };
+		D24217AB1B53DC900056D513 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24217AA1B53DC900056D513 /* Images.xcassets */; };
+		D24217AE1B53DC900056D513 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24217AC1B53DC900056D513 /* LaunchScreen.xib */; };
+		D24217BA1B53DC900056D513 /* SCRButtonBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D24217B91B53DC900056D513 /* SCRButtonBarDemoTests.m */; };
+		D24217C51B53DCC20056D513 /* SCRButtonBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D24217C41B53DCC20056D513 /* SCRButtonBar.m */; };
+		D24217C91B53DCF20056D513 /* SCRButtonBarDefaultButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D24217C81B53DCF20056D513 /* SCRButtonBarDefaultButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D24217B41B53DC900056D513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D24217921B53DC900056D513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D24217991B53DC900056D513;
+			remoteInfo = SCRButtonBarDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D242179A1B53DC900056D513 /* SCRButtonBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCRButtonBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D242179E1B53DC900056D513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D242179F1B53DC900056D513 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D24217A11B53DC900056D513 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D24217A21B53DC900056D513 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D24217A41B53DC900056D513 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D24217A51B53DC900056D513 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D24217A81B53DC900056D513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D24217AA1B53DC900056D513 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D24217AD1B53DC900056D513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D24217B31B53DC900056D513 /* SCRButtonBarDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCRButtonBarDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D24217B81B53DC900056D513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24217B91B53DC900056D513 /* SCRButtonBarDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRButtonBarDemoTests.m; sourceTree = "<group>"; };
+		D24217C31B53DCC20056D513 /* SCRButtonBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCRButtonBar.h; path = ../../SCRButtonBar/SCRButtonBar.h; sourceTree = "<group>"; };
+		D24217C41B53DCC20056D513 /* SCRButtonBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRButtonBar.m; path = ../../SCRButtonBar/SCRButtonBar.m; sourceTree = "<group>"; };
+		D24217C71B53DCF20056D513 /* SCRButtonBarDefaultButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCRButtonBarDefaultButton.h; path = ../../SCRButtonBar/SCRButtonBarDefaultButton.h; sourceTree = "<group>"; };
+		D24217C81B53DCF20056D513 /* SCRButtonBarDefaultButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRButtonBarDefaultButton.m; path = ../../SCRButtonBar/SCRButtonBarDefaultButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D24217971B53DC900056D513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24217B01B53DC900056D513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D24217911B53DC900056D513 = {
+			isa = PBXGroup;
+			children = (
+				D242179C1B53DC900056D513 /* SCRButtonBarDemo */,
+				D24217B61B53DC900056D513 /* SCRButtonBarDemoTests */,
+				D242179B1B53DC900056D513 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D242179B1B53DC900056D513 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D242179A1B53DC900056D513 /* SCRButtonBarDemo.app */,
+				D24217B31B53DC900056D513 /* SCRButtonBarDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D242179C1B53DC900056D513 /* SCRButtonBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D24217C61B53DCCA0056D513 /* SCRButtonBar */,
+				D24217A11B53DC900056D513 /* AppDelegate.h */,
+				D24217A21B53DC900056D513 /* AppDelegate.m */,
+				D24217A41B53DC900056D513 /* ViewController.h */,
+				D24217A51B53DC900056D513 /* ViewController.m */,
+				D24217A71B53DC900056D513 /* Main.storyboard */,
+				D24217AA1B53DC900056D513 /* Images.xcassets */,
+				D24217AC1B53DC900056D513 /* LaunchScreen.xib */,
+				D242179D1B53DC900056D513 /* Supporting Files */,
+			);
+			path = SCRButtonBarDemo;
+			sourceTree = "<group>";
+		};
+		D242179D1B53DC900056D513 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D242179E1B53DC900056D513 /* Info.plist */,
+				D242179F1B53DC900056D513 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D24217B61B53DC900056D513 /* SCRButtonBarDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D24217B91B53DC900056D513 /* SCRButtonBarDemoTests.m */,
+				D24217B71B53DC900056D513 /* Supporting Files */,
+			);
+			path = SCRButtonBarDemoTests;
+			sourceTree = "<group>";
+		};
+		D24217B71B53DC900056D513 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D24217B81B53DC900056D513 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D24217C61B53DCCA0056D513 /* SCRButtonBar */ = {
+			isa = PBXGroup;
+			children = (
+				D24217C31B53DCC20056D513 /* SCRButtonBar.h */,
+				D24217C41B53DCC20056D513 /* SCRButtonBar.m */,
+				D24217C71B53DCF20056D513 /* SCRButtonBarDefaultButton.h */,
+				D24217C81B53DCF20056D513 /* SCRButtonBarDefaultButton.m */,
+			);
+			name = SCRButtonBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D24217991B53DC900056D513 /* SCRButtonBarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24217BD1B53DC900056D513 /* Build configuration list for PBXNativeTarget "SCRButtonBarDemo" */;
+			buildPhases = (
+				D24217961B53DC900056D513 /* Sources */,
+				D24217971B53DC900056D513 /* Frameworks */,
+				D24217981B53DC900056D513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCRButtonBarDemo;
+			productName = SCRButtonBarDemo;
+			productReference = D242179A1B53DC900056D513 /* SCRButtonBarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D24217B21B53DC900056D513 /* SCRButtonBarDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24217C01B53DC900056D513 /* Build configuration list for PBXNativeTarget "SCRButtonBarDemoTests" */;
+			buildPhases = (
+				D24217AF1B53DC900056D513 /* Sources */,
+				D24217B01B53DC900056D513 /* Frameworks */,
+				D24217B11B53DC900056D513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D24217B51B53DC900056D513 /* PBXTargetDependency */,
+			);
+			name = SCRButtonBarDemoTests;
+			productName = SCRButtonBarDemoTests;
+			productReference = D24217B31B53DC900056D513 /* SCRButtonBarDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D24217921B53DC900056D513 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Shang Chuanren";
+				TargetAttributes = {
+					D24217991B53DC900056D513 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					D24217B21B53DC900056D513 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = D24217991B53DC900056D513;
+					};
+				};
+			};
+			buildConfigurationList = D24217951B53DC900056D513 /* Build configuration list for PBXProject "SCRButtonBarDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D24217911B53DC900056D513;
+			productRefGroup = D242179B1B53DC900056D513 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D24217991B53DC900056D513 /* SCRButtonBarDemo */,
+				D24217B21B53DC900056D513 /* SCRButtonBarDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D24217981B53DC900056D513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24217A91B53DC900056D513 /* Main.storyboard in Resources */,
+				D24217AE1B53DC900056D513 /* LaunchScreen.xib in Resources */,
+				D24217AB1B53DC900056D513 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24217B11B53DC900056D513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D24217961B53DC900056D513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24217A61B53DC900056D513 /* ViewController.m in Sources */,
+				D24217A31B53DC900056D513 /* AppDelegate.m in Sources */,
+				D24217C51B53DCC20056D513 /* SCRButtonBar.m in Sources */,
+				D24217A01B53DC900056D513 /* main.m in Sources */,
+				D24217C91B53DCF20056D513 /* SCRButtonBarDefaultButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24217AF1B53DC900056D513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24217BA1B53DC900056D513 /* SCRButtonBarDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D24217B51B53DC900056D513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D24217991B53DC900056D513 /* SCRButtonBarDemo */;
+			targetProxy = D24217B41B53DC900056D513 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D24217A71B53DC900056D513 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D24217A81B53DC900056D513 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D24217AC1B53DC900056D513 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D24217AD1B53DC900056D513 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D24217BB1B53DC900056D513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D24217BC1B53DC900056D513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D24217BE1B53DC900056D513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SCRButtonBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D24217BF1B53DC900056D513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SCRButtonBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D24217C11B53DC900056D513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SCRButtonBarDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCRButtonBarDemo.app/SCRButtonBarDemo";
+			};
+			name = Debug;
+		};
+		D24217C21B53DC900056D513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SCRButtonBarDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCRButtonBarDemo.app/SCRButtonBarDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D24217951B53DC900056D513 /* Build configuration list for PBXProject "SCRButtonBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24217BB1B53DC900056D513 /* Debug */,
+				D24217BC1B53DC900056D513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D24217BD1B53DC900056D513 /* Build configuration list for PBXNativeTarget "SCRButtonBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24217BE1B53DC900056D513 /* Debug */,
+				D24217BF1B53DC900056D513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D24217C01B53DC900056D513 /* Build configuration list for PBXNativeTarget "SCRButtonBarDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24217C11B53DC900056D513 /* Debug */,
+				D24217C21B53DC900056D513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D24217921B53DC900056D513 /* Project object */;
+}
