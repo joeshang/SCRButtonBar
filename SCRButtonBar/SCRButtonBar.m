@@ -29,6 +29,10 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
 - (instancetype)initWithFrame:(CGRect)frame items:(NSArray *)items countPerRow:(NSUInteger)countPerRow {
     self = [super initWithFrame:frame];
     
+    if (!items || ![items count]) {
+        return nil;
+    }
+    
     if (self) {
         _items = [items copy];
         for (UIView *item in _items) {

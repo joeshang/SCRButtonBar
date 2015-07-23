@@ -41,6 +41,14 @@ static CGFloat const kTitleIconSpacing = 6.0f;
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    return [self initWithTitle:nil icon:nil];
+}
+
+- (instancetype)init {
+    return [self initWithTitle:nil icon:nil];
+}
+
 #pragma mark - Override Accessors
 
 - (void)setHighlighted:(BOOL)highlighted {

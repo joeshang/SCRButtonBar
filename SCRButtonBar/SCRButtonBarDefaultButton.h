@@ -19,6 +19,6 @@
 @property (nonatomic, assign) CGFloat       spacing;
 @property (nonatomic, assign) BOOL          vertical;
 
-- (instancetype)initWithTitle:(NSString *)title icon:(UIImage *)icon;
+- (instancetype)initWithTitle:(NSString *)title icon:(UIImage *)icon __attribute__((objc_designated_initializer));
 
 @end
