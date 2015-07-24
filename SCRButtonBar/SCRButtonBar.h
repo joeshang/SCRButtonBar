@@ -17,8 +17,7 @@
 @property (nonatomic, assign) UIEdgeInsets  contentInsets;
 
 @property (nonatomic, strong) UIColor       *seperatorColor;
-@property (nonatomic, assign) CGFloat       verticalSeperatorWeight;
-@property (nonatomic, assign) CGFloat       horizonalSeperatorWeight;
+@property (nonatomic, assign) CGFloat       seperatorWeight;
 @property (nonatomic, assign) NSInteger     verticalSeperatorMargin;
 @property (nonatomic, assign) NSInteger     horizonalSeperatorMargin;
 

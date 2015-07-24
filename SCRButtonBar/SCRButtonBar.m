@@ -40,8 +40,7 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
         }
         _countPerRow = countPerRow;
         _seperatorColor = kSeperatorDefaultColor;
-        _verticalSeperatorWeight = kSeperatorDefaultWeight;
-        _horizonalSeperatorWeight = kSeperatorDefaultWeight;
+        _seperatorWeight = kSeperatorDefaultWeight;
         _verticalSeperatorMargin = kVerticalSeperatorDefaultMargin;
         _horizonalSeperatorMargin = kHorizonalSeperatorDefaultMargin;
         _verticalSeperators = [[NSMutableArray alloc] init];
@@ -64,37 +63,53 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
     }
     
     NSInteger row = [self p_totalRow];
+    CGFloat seperatorWeight = ceilf(self.seperatorWeight); // 在计算位置时需要确保为整数，而在真正设置宽度时使用原值
     CGFloat contentWidth = self.bounds.size.width - self.contentInsets.left - self.contentInsets.right;
     CGFloat contentHeight = self.bounds.size.height - self.contentInsets.top - self.contentInsets.bottom;
-    CGFloat buttonWidth = roundf(contentWidth / self.countPerRow);
-    CGFloat buttonHeight = roundf(contentHeight / row);
+    CGFloat buttonWidth = roundf((contentWidth - self.countPerRow * seperatorWeight) / self.countPerRow);
+    CGFloat buttonHeight = roundf((contentHeight - row * seperatorWeight) / row);
     
     __block CGPoint origin = CGPointZero;
     [self.items enumerateObjectsUsingBlock:^(UIView *item, NSUInteger index, BOOL *stop){
         
         NSUInteger currentRow = index / self.countPerRow;
         NSUInteger currentColumn = index % self.countPerRow;
-        origin.x = self.contentInsets.left + currentColumn * buttonWidth;
-        origin.y = self.contentInsets.top + currentRow * buttonHeight;
-        item.frame = CGRectMake(origin.x, origin.y, buttonWidth, buttonHeight);
+        origin.x = self.contentInsets.left + currentColumn * (buttonWidth + seperatorWeight);
+        origin.y = self.contentInsets.top + currentRow * (buttonHeight + seperatorWeight);
+        
+        CGRect buttonFrame = CGRectMake(origin.x, origin.y, buttonWidth, buttonHeight);
        
         if (currentColumn != self.countPerRow - 1) {
             // 纵向分隔符
             UIView *seperator = self.verticalSeperators[currentColumn + currentRow * (self.countPerRow - 1)];
             seperator.frame = CGRectMake(origin.x + buttonWidth,
                                          origin.y + self.verticalSeperatorMargin,
-                                         self.verticalSeperatorWeight,
+                                         self.seperatorWeight,
                                          buttonHeight - 2 * self.verticalSeperatorMargin);
         } else {
+            // 每行最后一个，处理由于四舍五入导致的宽度偏差
+            if (origin.x + buttonWidth != contentWidth) {
+                buttonFrame.size.width = contentWidth - origin.x;
+            }
+            
             if (currentRow != row - 1) {
                 // 横向分隔符
                 UIView *seperator = self.horizonalSeperators[currentRow];
                 seperator.frame = CGRectMake(self.horizonalSeperatorMargin,
                                              origin.y + buttonHeight,
                                              contentWidth - 2 * self.horizonalSeperatorMargin,
-                                             self.horizonalSeperatorWeight);
+                                             self.seperatorWeight);
             }
         }
+     
+        if (currentRow == row - 1) {
+            // 最后一行，处理由于四舍五入导致的高度偏差
+            if (origin.y + buttonHeight != contentHeight) {
+                buttonFrame.size.height = contentHeight - origin.y;
+            }
+        }
+        
+        item.frame = buttonFrame;
     }];
 }
 
@@ -134,6 +149,12 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
     for (UIView *seperator in self.horizonalSeperators) {
         seperator.backgroundColor = seperatorColor;
     }
+}
+
+- (void)setSeperatorWeight:(CGFloat)seperatorWeight {
+    _seperatorWeight = seperatorWeight;
+    
+    [self setNeedsLayout];
 }
 
 - (void)setVerticalSeperatorMargin:(NSInteger)verticalSeperatorMargin {

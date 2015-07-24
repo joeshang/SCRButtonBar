@@ -26,7 +26,7 @@
                                              initWithTitle:[NSString stringWithFormat:@"测试%@", @(index)]
                                              icon:[UIImage imageNamed:@"icon"]];
                                              
-        button.highlightedBackgroundColor = [UIColor lightGrayColor];
+        button.highlightedBackgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.5];
         button.vertical = YES;
         button.tag = index;
         [button addTarget:self
@@ -41,8 +41,8 @@
     buttonBar.countPerRow = 4;
     buttonBar.verticalSeperatorMargin = 10;
     buttonBar.horizonalSeperatorMargin = 5;
-    buttonBar.contentInsets = UIEdgeInsetsMake(5, 5, 5, 5);
-    buttonBar.backgroundColor = [UIColor redColor];
+    buttonBar.seperatorWeight = 1.0f;
+    buttonBar.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
     [self.view addSubview:buttonBar];
 }
 
