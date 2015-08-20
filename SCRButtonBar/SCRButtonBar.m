@@ -29,7 +29,7 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
 - (instancetype)initWithFrame:(CGRect)frame items:(NSArray *)items countPerRow:(NSUInteger)countPerRow {
     self = [super initWithFrame:frame];
     
-    if (!items || ![items count]) {
+    if (!items || !items.count) {
         return nil;
     }
     
@@ -52,12 +52,14 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame items:(NSArray *)items {
-    return [self initWithFrame:frame items:items countPerRow:[items count]];
+    return [self initWithFrame:frame items:items countPerRow:items.count];
 }
 
 #pragma mark - Layout
 
 - (void)layoutSubviews {
+    [super layoutSubviews];
+    
     if (self.backgroundImageView) {
         self.backgroundImageView.frame = self.bounds;
     }
@@ -131,8 +133,8 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
 }
 
 - (void)setCountPerRow:(NSUInteger)countPerRow {
-    if (countPerRow > [self.items count]) {
-        countPerRow = [self.items count];
+    if (countPerRow > self.items.count) {
+        countPerRow = self.items.count;
     }
     _countPerRow = countPerRow;
     
@@ -211,8 +213,8 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
     
     [self.verticalSeperators removeAllObjects];
 
-    if ([self.items count] % self.countPerRow) {
-        seperatorCount = (row - 1) * (self.countPerRow - 1) + ([self.items count] % self.countPerRow);
+    if (self.items.count % self.countPerRow) {
+        seperatorCount = (row - 1) * (self.countPerRow - 1) + (self.items.count % self.countPerRow);
     } else {
         seperatorCount = row * (self.countPerRow - 1);
     }
@@ -244,10 +246,10 @@ static CGFloat const kHorizonalSeperatorDefaultMargin = 0.0f;
 - (NSInteger)p_totalRow {
     NSInteger row = 0;
     
-    if ([self.items count] % self.countPerRow) {
-        row = [self.items count] / self.countPerRow + 1;
+    if (self.items.count % self.countPerRow) {
+        row = self.items.count / self.countPerRow + 1;
     } else {
-        row = [self.items count] / self.countPerRow;
+        row = self.items.count / self.countPerRow;
     }
     
     return row;
